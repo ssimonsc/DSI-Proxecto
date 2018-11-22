@@ -129,7 +129,7 @@ else
   }
 }
             // Print your structure data here.
-	    if(m_Hello.direction() !=1523 ){
+/*	    if(m_Hello.direction() !=1523 ){
 		servoRight = (m_Hello.forward()-1099)*0.0009;
 		servoLeft = servoRight;
 		//move to the left
@@ -141,7 +141,7 @@ else
 			servoRight  = servoRight + (m_Hello.direction()-1523)*0.0006;
 		}
 	    }
-
+*/
 	    //send data to engines
 	    pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, servoRight);
 	    pwm->set_duty_cycle(PWM_OUTPUT_LEFT, servoLeft);
