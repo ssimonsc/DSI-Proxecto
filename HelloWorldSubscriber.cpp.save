@@ -16,11 +16,11 @@
 #include <unistd.h>
 #include <memory>
 
-#define SERVO_MIN 1516 /*mS*/
-#define SERVO_MAX 1908 /*mS*/
+//#define SERVO_MIN 1516 /*mS*/
+//#define SERVO_MAX 1908 /*mS*/
 
-//#define SERVO_MIN 1500 /*mS*/
-//#define SERVO_MAX 2300 /*mS*/
+#define SERVO_MIN 1500 /*mS*/
+#define SERVO_MAX 2300 /*mS*/
 
 
 #define PWM_OUTPUT_RIGHT 0
@@ -107,41 +107,39 @@ return ptr;
 
 }
 
-auto pwm = get_rcout(); 
-
 void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
 {
     float servoRight;
     float servoLeft;
-    //auto pwm = get_rcout(); 
+    auto pwm = get_rcout(); 
     if(sub->takeNextData((void*)&m_Hello, &m_info))
     {
         if(m_info.sampleKind == ALIVE)
         {
+/*
+if(m_Hello.forward() > 1509)
+{
+   servoRight = SERVO_MIN;
+   servoLeft = SERVO_MIN;
+}
+else
+{
+  servoRight = (-m_Hello.forward() + 1509) * 2 + SERVO_MIN;
+  servoLeft = (-m_Hello.forward() + 1509) * 2 + SERVO_MIN; 
 
-		if(m_Hello.forward() > 1520)
-		{
-   		servoRight = SERVO_MIN;
-   		servoLeft = SERVO_MIN;
-		}
-	else
-	{
-  		servoRight = (-m_Hello.forward() + 1509) * 2 + 400;
-  		servoLeft = (-m_Hello.forward() + 1509) * 2 + 400; 
+  if(m_Hello.direction() > 1548)
+  {
+	servoRight += ((m_Hello.direction() - 1508) / 2);
+  }
+    if(m_Hello.direction() < 1495)
+  {
+	servoLeft += ((m_Hello.direction() - 1508) / 2);
+  }
+}
 
-  		if(m_Hello.direction() > 1548)
-  		{
-			servoRight += ((m_Hello.direction() - 1508) / 2);
-  		}
-    		if(m_Hello.direction() < 1495)
-  		{
-			servoLeft += ((-m_Hello.direction() + 1508) / 2);
-  		}
-	}
-
-	 std::cout << "Motor dereito " << servoRight<<std::endl;
- 	 std::cout << "Motor esquerdo " << servoLeft<<std::endl;
-
+   std::cout << "Motor dereito " << servoRight<<std::endl;
+ std::cout << "Motor esquerdo " << servoLeft<<std::endl;
+*/
             // Print your structure data here.
 /*	    if(m_Hello.direction() !=1523 ){
 		servoRight = (m_Hello.forward()-1099)*0.0009;
@@ -156,8 +154,9 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
 		}
 	    }
 */
+
 	    //send data to engines
-	    pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, servoRight);
+	    pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, servoRigh);
 	    pwm->set_duty_cycle(PWM_OUTPUT_LEFT, servoLeft);
 
             std::cout << "Message "<<m_Hello.forward()<< " "<< m_Hello.direction()<< " RECEIVED"<<std::endl;
@@ -170,7 +169,7 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
 int HelloWorldSubscriber::run()
 {
 
-	//auto pwm = get_rcout();
+	auto pwm = get_rcout();
 
     printf("OLA MUNDO");
 
@@ -198,26 +197,26 @@ int HelloWorldSubscriber::run()
         if ( !(pwm->enable(PWM_OUTPUT_LEFT)) ) {
             return 1;
 	}
-
+/*
         for(int i=0; i<4; i++){
-                pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 1400);
-                pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 1400);
+                pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, SERVO_MIN);
+                pwm->set_duty_cycle(PWM_OUTPUT_LEFT, SERVO_MIN);
                 sleep(1);
         }
-  std::cout << "NIVEL ALTO"<<std::endl;
+  */ std::cout << "NIVEL ALTO"<<std::endl;
 
-/*	for(int i = 0; i < 100000; i++){
-		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, SERVO_MAX);
-		pwm->set_duty_cycle(PWM_OUTPUT_LEFT, SERVO_MAX);
-		usleep(100);
-	}*/
-   	std::cout << "NIVEL BAIXO"<<std::endl;
-	
-	for(int i = 0; i < 100000; i++) {
-		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 2000);
-		pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 2000);
-		usleep(100);
-	}
+for(int i = 0; i < 10000; i++){
+pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, SERVO_MAX);
+pwm->set_duty_cycle(PWM_OUTPUT_LEFT, SERVO_MAX);
+usleep(100);
+}
+   std::cout << "NIVEL BAIXO"<<std::endl;
+
+for(int i = 0; i < 10000; i++) {
+pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, SERVO_MIN);
+pwm->set_duty_cycle(PWM_OUTPUT_LEFT, SERVO_MIN);
+usleep(100);
+}
 
 std::cout << "FIN NIVEL BAIXO"<<std::endl;
 
