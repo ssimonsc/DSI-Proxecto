@@ -8,10 +8,6 @@
 
 ../../Navio/Common/ADC.h
 
-../../Navio/Common/I2Cdev.h
-stdint.h
--
-
 ../../Navio/Common/InertialSensor.h
 
 ../../Navio/Common/Led.h
@@ -46,32 +42,6 @@ cstdio
 
 ../../Navio/Common/gpio.h
 stdint.h
--
-
-../../Navio/Navio+/PCA9685.h
-stdint.h
--
-stdlib.h
--
-string.h
--
-unistd.h
--
-stdio.h
--
-math.h
--
-string
--
-../Common/I2Cdev.h
-../../Navio/Common/I2Cdev.h
-
-../../Navio/Navio+/RCOutput_Navio.h
-Common/RCOutput.h
--
-PCA9685.h
-../../Navio/Navio+/PCA9685.h
-Common/gpio.h
 -
 
 ../../Navio/Navio2/PWM.h
@@ -195,8 +165,6 @@ unistd.h
 -
 Navio2/PWM.h
 /home/pi/Navio2/C++/Examples/DDS/Navio2/PWM.h
-Navio+/RCOutput_Navio.h
-/home/pi/Navio2/C++/Examples/DDS/Navio+/RCOutput_Navio.h
 Navio2/RCOutput_Navio2.h
 /home/pi/Navio2/C++/Examples/DDS/Navio2/RCOutput_Navio2.h
 Common/Util.h

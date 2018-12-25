@@ -123,7 +123,7 @@ int HelloWorldPublisher::run(){
         int direction = rcin-> read(3);
         if (direction == READ_FAILED) return EXIT_FAILURE;
         printf("Reading direction %i \n", direction);
-int emergencyStop = rcin -> read(4);
+	int emergencyStop = rcin -> read(4);
         if(emergencyStop == READ_FAILED) return EXIT_FAILURE;
         printf("Reading emergency stop %i \n", emergencyStop);
         m_Hello.forward(forward);
@@ -131,7 +131,7 @@ int emergencyStop = rcin -> read(4);
 	if(emergencyStop == 964) m_Hello.emergencyStop(1);
         else m_Hello.emergencyStop(0);
         mp_publisher->write((void*)&m_Hello);
-//usleep(100);
+	usleep(100);
         }
 
 	sleep(1);

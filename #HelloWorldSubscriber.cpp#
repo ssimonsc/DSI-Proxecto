@@ -10,13 +10,14 @@
 //Libraries for Navio
 #include <unistd.h>
 #include "Navio2/PWM.h"
+#include "Navio+/RCOutput_Navio.h"
 #include "Navio2/RCOutput_Navio2.h"
 #include "Common/Util.h"
 #include <unistd.h>
 #include <memory>
 
-#define SERVO_MIN 1516 /*mS*/
-#define SERVO_MAX 1908 /*mS*/
+#define SERVO_MAX 1516 /*mS*/
+#define SERVO_MIN 1908 /*mS*/
 
 //#define SERVO_MIN 1500 /*mS*/
 //#define SERVO_MAX 2300 /*mS*/
@@ -26,9 +27,10 @@
 #define PWM_OUTPUT_LEFT  2
 
 
-
 using namespace eprosima::fastrtps;
 using namespace eprosima::fastrtps::rtps;
+using namespace Navio;
+
 HelloWorldSubscriber::HelloWorldSubscriber():mp_participant(nullptr),
 mp_subscriber(nullptr)
 {
@@ -117,15 +119,15 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
         if(m_info.sampleKind == ALIVE)
         {
 
-		if(m_Hello.forward() > 1520)
+		if(m_Hello.forward() > 1509)
 		{
    		servoRight = SERVO_MIN;
    		servoLeft = SERVO_MIN;
 		}
 	else
 	{
-  		servoRight = (-m_Hello.forward() + 1509) * 2 + 800;
-  		servoLeft = (-m_Hello.forward() + 1509) * 2 + 800; 
+  		servoRight = (-m_Hello.forward() + 1509) * 2 + SERVO_MIN;
+  		servoLeft = (-m_Hello.forward() + 1509) * 2 + SERVO_MIN; 
 
   		if(m_Hello.direction() > 1548)
   		{
@@ -133,7 +135,7 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
   		}
     		if(m_Hello.direction() < 1495)
   		{
-			servoLeft += ((-m_Hello.direction() + 1508) / 2);
+			servoLeft += ((m_Hello.direction() - 1508) / 2);
   		}
 	}
 
@@ -196,13 +198,13 @@ int HelloWorldSubscriber::run()
         if ( !(pwm->enable(PWM_OUTPUT_LEFT)) ) {
             return 1;
 	}
-
+/*
         for(int i=0; i<4; i++){
-                pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 1400);
-                pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 1400);
+                pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, SERVO_MIN);
+                pwm->set_duty_cycle(PWM_OUTPUT_LEFT, SERVO_MIN);
                 sleep(1);
         }
-  std::cout << "NIVEL ALTO"<<std::endl;
+  */ std::cout << "NIVEL ALTO"<<std::endl;
 
 /*	for(int i = 0; i < 100000; i++){
 		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, SERVO_MAX);
@@ -211,12 +213,12 @@ int HelloWorldSubscriber::run()
 	}*/
    	std::cout << "NIVEL BAIXO"<<std::endl;
 	
-/*	for(int i = 0; i < 100000; i++) {
-		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 2000);
-		pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 2000);
+	for(int i = 0; i < 100000; i++) {
+		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 3sudo apt-get install emacs25-nox000);
+		pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 3000);
 		usleep(100);
 	}
-*/
+
 std::cout << "FIN NIVEL BAIXO"<<std::endl;
 
 	std::cin.ignore();

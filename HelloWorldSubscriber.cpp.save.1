@@ -10,12 +10,13 @@
 //Libraries for Navio
 #include <unistd.h>
 #include "Navio2/PWM.h"
+#include "Navio+/RCOutput_Navio.h"
 #include "Navio2/RCOutput_Navio2.h"
 #include "Common/Util.h"
 #include <unistd.h>
 #include <memory>
 
-#define SERVO_MIN 1516 /*mS*/
+#define SERVO_MIN 1012 /*mS*/
 #define SERVO_MAX 1908 /*mS*/
 
 //#define SERVO_MIN 1500 /*mS*/
@@ -26,9 +27,10 @@
 #define PWM_OUTPUT_LEFT  2
 
 
-
 using namespace eprosima::fastrtps;
 using namespace eprosima::fastrtps::rtps;
+using namespace Navio;
+
 HelloWorldSubscriber::HelloWorldSubscriber():mp_participant(nullptr),
 mp_subscriber(nullptr)
 {
@@ -124,8 +126,8 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
 		}
 	else
 	{
-  		servoRight = (-m_Hello.forward() + 1509) * 2 + 800;
-  		servoLeft = (-m_Hello.forward() + 1509) * 2 + 800; 
+  		servoRight = (-m_Hello.forward() + 1509) * 2 + 400;
+  		servoLeft = (-m_Hello.forward() + 1509) * 2 + 400; 
 
   		if(m_Hello.direction() > 1548)
   		{
@@ -211,12 +213,12 @@ int HelloWorldSubscriber::run()
 	}*/
    	std::cout << "NIVEL BAIXO"<<std::endl;
 	
-/*	for(int i = 0; i < 100000; i++) {
+	for(int i = 0; i < 100000; i++) {
 		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 2000);
 		pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 2000);
 		usleep(100);
 	}
-*/
+
 std::cout << "FIN NIVEL BAIXO"<<std::endl;
 
 	std::cin.ignore();

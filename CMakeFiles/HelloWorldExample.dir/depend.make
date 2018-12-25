@@ -87,12 +87,8 @@ CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/f
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/fastrtps/utils/eClock.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/fastrtps/utils/md5.h
 
-CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Common/I2Cdev.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Common/RCOutput.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Common/Util.h
-CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Common/gpio.h
-CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Navio+/PCA9685.h
-CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Navio+/RCOutput_Navio.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Navio2/PWM.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: ../../Navio/Navio2/RCOutput_Navio2.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o: HelloWorld.h
