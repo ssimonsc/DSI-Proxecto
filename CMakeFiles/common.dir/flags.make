@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pi/Navio2/C++/Examples/DDS/../../Navio 
+CXX_INCLUDES = -I/home/pi/Navio2/C++/Examples/DDS3/../../Navio 
 

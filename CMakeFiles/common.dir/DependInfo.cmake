@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/Navio2/C++/Navio/Common/I2Cdev.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/I2Cdev.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Common/MPU9250.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/MPU9250.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Common/MS5611.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/MS5611.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Common/Ublox.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/Ublox.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Common/Util.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/Util.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Common/gpio.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/gpio.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Common/I2Cdev.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/I2Cdev.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Common/MPU9250.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/MPU9250.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Common/MS5611.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/MS5611.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Common/Ublox.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/Ublox.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Common/Util.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/Util.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Common/gpio.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/common.dir/home/pi/Navio2/C++/Navio/Common/gpio.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

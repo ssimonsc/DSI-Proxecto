@@ -9,14 +9,22 @@
 #include <unistd.h>
 #include <cstdio>
 //Navio libraries
-#include </home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.h>
 #include </home/pi/Navio2/C++/Navio/Common/Util.h>
 #include <memory>
+
+//Opencv
+#include <iostream>
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+
 
 #define READ_FAILED -1
 
 using namespace eprosima::fastrtps;
 using namespace eprosima::fastrtps::rtps;
+
+using namespace cv;
+using namespace std;
 
 HelloWorldPublisher::HelloWorldPublisher():mp_participant(nullptr),
 mp_publisher(nullptr)
@@ -74,21 +82,7 @@ HelloWorldPublisher::~HelloWorldPublisher()
     Domain::removeParticipant(mp_participant);
 }
 
-std::unique_ptr <RCInput> get_rcin()
-{
-    if (get_navio_version() == NAVIO2)
-    {
-	std::cout << "Ola Caracola"<<std::endl;
-        auto ptr = std::unique_ptr <RCInput>{ new RCInput_Navio2()};
-        return ptr;
-    }// else
 
-    //{
-       // auto ptr = std::unique_ptr <RCInput>{ new RCInput_Navio()};
-     //   return ptr;
-   // }
-
-}
 
 void HelloWorldPublisher::PubListener::onPublicationMatched(Publisher* /*pub*/,MatchingInfo& info)
 {
@@ -110,30 +104,164 @@ int HelloWorldPublisher::run(){
     }
 
 
-   auto rcin = get_rcin();
+  VideoCapture cap(0); //capture the video from webcam
 
-    rcin->initialize();
-    printf("Just inicialized the RC");
+    if ( !cap.isOpened() )  // if not success, exit program
+    {
+         cout << "Cannot open the web cam" << endl;
+         return -1;
+    }
 
-	
-    while(true){
-	int forward = rcin-> read(1);
-        if(forward == READ_FAILED) return EXIT_FAILURE;
-        printf("Reading forward %i \n", forward);
-        int direction = rcin-> read(3);
-        if (direction == READ_FAILED) return EXIT_FAILURE;
-        printf("Reading direction %i \n", direction);
-	int emergencyStop = rcin -> read(4);
-        if(emergencyStop == READ_FAILED) return EXIT_FAILURE;
-        printf("Reading emergency stop %i \n", emergencyStop);
-        m_Hello.forward(forward);
-        m_Hello.direction(direction);
-	if(emergencyStop == 964) m_Hello.emergencyStop(1);
-        else m_Hello.emergencyStop(0);
-        mp_publisher->write((void*)&m_Hello);
-	usleep(100);
+
+ int iLastXg = -1; 
+ int iLastYg = -1;
+int iLastX = -1; 
+ int iLastY = -1;
+
+ //Capture a temporary image from the camera
+ Mat imgTmp;
+ cap.read(imgTmp); 
+
+ //Create a black image with the size as the camera output
+ Mat imgLines = Mat::zeros( imgTmp.size(), CV_8UC3 );;
+        for(int i = 0; i < 4500; i++){
+                         m_Hello.direction(1502);
+                        m_Hello.forward(1104);
+                        mp_publisher->write((void*)&m_Hello);
+
+                usleep(100);
+        }
+     for(int i = 0; i < 3000; i++){
+                         m_Hello.direction(1502);
+                        m_Hello.forward(1514);
+                        mp_publisher->write((void*)&m_Hello);
+
+                usleep(100);
+        }
+ 
+
+    while (true)
+    {
+
+	cout << "Ola mundo OPENCV" << endl;
+
+	Mat imgOriginal;
+
+        bool bSuccess = cap.read(imgOriginal); // read a new frame from video
+
+
+
+        if (!bSuccess) //if not success, break loop
+       	{
+             cout << "Cannot read a frame from video stream" << endl;
+             break;
         }
 
-	sleep(1);
+ 	Mat imgHSV;
+
+ 	cvtColor(imgOriginal, imgHSV, COLOR_BGR2HSV); //Convert the captured frame from BGR to HSV
+
+  	Mat imgGreen;
+
+  	inRange(imgHSV, Scalar(38, 100, 100), Scalar(90, 255, 255), imgGreen); //Threshold the image
+
+  	//morphological opening (removes small objects from the foreground)
+  	erode(imgGreen, imgGreen, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) );
+  	dilate( imgGreen, imgGreen, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) ); 
+
+  	//morphological closing (removes small holes from the foreground)
+  	dilate( imgGreen, imgGreen, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) ); 
+  	erode(imgGreen, imgGreen, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) );
+
+  	//Calculate the moments of the thresholded image
+ 	 Moments oMomentsg = moments(imgGreen);
+
+  	double dM01g = oMomentsg.m01;
+  	double dM10g = oMomentsg.m10;
+  	double dAreag = oMomentsg.m00;
+	int forward = 1196;
+	int direction = 1519;
+	//int direction = 1480;
+	int posXg = 0;
+	// if the area <= 10000, I consider that the there are no object in the image and it's because of the noise, the area is not zero 
+  	if (dAreag > 10000)
+  	{
+   		//calculate the position of the ball
+   		posXg = dM10g / dAreag;
+   		int posYg = dM01g / dAreag;
+
+   		cout<< "Eje X objeto verde:"<< posXg << "  ";
+   		cout<< "Eje Y objeto verde:" <<  posYg << "\n";
+   		if (iLastXg >= 0 && iLastYg >= 0 && posXg >= 0 && posYg >= 0)
+   		{
+    			//Draw a red line from the previous point to the current point
+    			line(imgLines, Point(posXg, posYg), Point(iLastXg, iLastYg), Scalar(0,0,255), 2);
+   		}
+
+   		iLastXg = posXg;
+   		iLastYg = posYg;
+  	}
+
+Mat imgOrange;
+
+  inRange(imgHSV, Scalar(0, 100, 100), Scalar(20, 255, 255), imgOrange); //Threshold the image
+
+  //morphological opening (removes small objects from the foreground)
+  erode(imgOrange, imgOrange, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) );
+  dilate( imgOrange, imgOrange, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) ); 
+
+  //morphological closing (removes small holes from the foreground)
+  dilate( imgOrange, imgOrange, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) ); 
+  erode(imgOrange, imgOrange, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) );
+
+  //Calculate the moments of the thresholded image
+  Moments oMoments = moments(imgOrange);
+
+  double dM01 = oMoments.m01;
+  double dM10 = oMoments.m10;
+  double dArea = oMoments.m00;
+	int posX = 640;
+  // if the area <= 10000, I consider that the there are no object in the image and it's because of the noise, the area is not zero 
+  if (dArea > 10000)
+  {
+   //calculate the position of the ball
+   posX = dM10 / dArea;
+   int posY = dM01 / dArea;        
+   cout<< "Eje X objeto naranja:"<< posX << "  ";
+   cout<< "Eje Y objeto naranja:" <<  posY << "\n";
+   if (iLastX >= 0 && iLastY >= 0 && posX >= 0 && posY >= 0)
+   {
+    //Draw a red line from the previous point to the current point
+    line(imgLines, Point(posX, posY), Point(iLastX, iLastY), Scalar(0,0,255), 2);
+   }
+
+   iLastX = posX;
+   iLastY = posY;
+  }
+
+  //              int posMedia = 320;
+//int posMediaConos = (posX - posXg) / 2;
+
+
+                if(posXg != (640 - posX)) {
+			if(posXg < (640-posX))
+                        {
+				direction = 1485;
+				//direction = 1490;
+			} else {
+				direction = 1531;
+				//direction = 1526;
+			}
+		}
+/*		if(posMediaCOnos > posMedia) {
+			direction = ;
+		}
+*/
+                        m_Hello.direction(direction);
+                        m_Hello.forward(forward);
+                        mp_publisher->write((void*)&m_Hello);
+                usleep(100);
+
 }
 
+}

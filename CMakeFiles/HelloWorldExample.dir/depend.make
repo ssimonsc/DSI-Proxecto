@@ -31,13 +31,11 @@ CMakeFiles/HelloWorldExample.dir/HelloWorldPubSubTypes.cxx.o: /usr/local/include
 CMakeFiles/HelloWorldExample.dir/HelloWorldPubSubTypes.cxx.o: /usr/local/include/fastrtps/rtps/common/Types.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPubSubTypes.cxx.o: /usr/local/include/fastrtps/utils/md5.h
 
-CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: ../../Navio/Common/RCInput.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorld.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorldPubSubTypes.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorldPublisher.cpp
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorldPublisher.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /home/pi/Navio2/C++/Navio/Common/Util.h
-CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/fastrtps/Domain.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/fastrtps/TopicDataType.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/fastrtps/attributes/ParticipantAttributes.h

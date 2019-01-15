@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o"
-  "/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp" "/home/pi/Navio2/C++/Examples/DDS/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o"
+  "/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp" "/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Navio2/C++/Examples/DDS
+CMAKE_SOURCE_DIR = /home/pi/Navio2/C++/Examples/DDS3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Navio2/C++/Examples/DDS
+CMAKE_BINARY_DIR = /home/pi/Navio2/C++/Examples/DDS3
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Navio2/C++/Examples/DDS/CMakeFiles /home/pi/Navio2/C++/Examples/DDS/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Navio2/C++/Examples/DDS3/CMakeFiles /home/pi/Navio2/C++/Examples/DDS3/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Navio2/C++/Examples/DDS/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Navio2/C++/Examples/DDS3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

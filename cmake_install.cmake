@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/Navio2/C++/Examples/DDS
+# Install script for directory: /home/pi/Navio2/C++/Examples/DDS3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/examples/C++/HelloWorldExample/HelloWorldExample"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/examples/C++/HelloWorldExample" TYPE EXECUTABLE FILES "/home/pi/Navio2/C++/Examples/DDS/HelloWorldExample")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/examples/C++/HelloWorldExample" TYPE EXECUTABLE FILES "/home/pi/Navio2/C++/Examples/DDS3/HelloWorldExample")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/examples/C++/HelloWorldExample/HelloWorldExample" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/examples/C++/HelloWorldExample/HelloWorldExample")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/examples/C++/HelloWorldExample/HelloWorldExample"
-         OLD_RPATH "/home/pi/Navio2/C++/Examples/DDS/../../Navio:/usr/local/lib:"
+         OLD_RPATH "/home/pi/Navio2/C++/Examples/DDS3/../../Navio:/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/examples/C++/HelloWorldExample/HelloWorldExample")
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/Navio2/C++/Examples/DDS/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/Navio2/C++/Examples/DDS3/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,3 +1,4 @@
+
 //Libraries for DDS
 #include "HelloWorldSubscriber.h"
 #include <fastrtps/participant/Participant.h>
@@ -15,7 +16,7 @@
 #include <unistd.h>
 #include <memory>
 
-#define SERVO_MIN 1516 /*mS*/
+#define SERVO_MIN 1416 /*mS*/
 #define SERVO_MAX 1908 /*mS*/
 
 //#define SERVO_MIN 1500 /*mS*/
@@ -127,7 +128,7 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
   		servoRight = (-m_Hello.forward() + 1509) * 2 + 800;
   		servoLeft = (-m_Hello.forward() + 1509) * 2 + 800; 
 
-  		if(m_Hello.direction() > 1548)
+  		if(m_Hello.direction() > 1525)
   		{
 			servoRight += ((m_Hello.direction() - 1508) / 2);
   		}
@@ -170,7 +171,7 @@ int HelloWorldSubscriber::run()
 
 	//auto pwm = get_rcout();
 
-    printf("OLA MUNDO");
+    printf("OLA MUNDO OPENCV");
 
 
         if (check_apm()) {
@@ -196,29 +197,29 @@ int HelloWorldSubscriber::run()
         if ( !(pwm->enable(PWM_OUTPUT_LEFT)) ) {
             return 1;
 	}
-
+/*
         for(int i=0; i<4; i++){
                 pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 1400);
                 pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 1400);
                 sleep(1);
-        }
-  std::cout << "NIVEL ALTO"<<std::endl;
+        }*/
+/*  std::cout << "NIVEL ALTO"<<std::endl;
 
-/*	for(int i = 0; i < 100000; i++){
+	for(int i = 0; i < 100; i++){
 		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, SERVO_MAX);
 		pwm->set_duty_cycle(PWM_OUTPUT_LEFT, SERVO_MAX);
 		usleep(100);
-	}*/
+	}
    	std::cout << "NIVEL BAIXO"<<std::endl;
 	
-/*	for(int i = 0; i < 100000; i++) {
+	for(int i = 0; i < 100; i++) {
 		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 2000);
 		pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 2000);
 		usleep(100);
 	}
-*/
-std::cout << "FIN NIVEL BAIXO"<<std::endl;
 
+std::cout << "FIN NIVEL BAIXO"<<std::endl;
+*/
 	std::cin.ignore();
 
     return 0;
