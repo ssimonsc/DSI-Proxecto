@@ -137,6 +137,10 @@ opencv2/highgui/highgui.hpp
 /home/pi/Navio2/C++/Examples/DDS3/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
 /home/pi/Navio2/C++/Examples/DDS3/opencv2/imgproc/imgproc.hpp
+stdio.h
+-
+pid.h
+/home/pi/Navio2/C++/Examples/DDS3/pid.h
 
 /home/pi/Navio2/C++/Examples/DDS3/HelloWorldPublisher.h
 HelloWorldPubSubTypes.h
@@ -203,6 +207,18 @@ fastrtps/utils/eClock.h
 -
 fastrtps/log/Log.h
 -
+
+/home/pi/Navio2/C++/Examples/DDS3/detectorConos.cpp
+
+/home/pi/Navio2/C++/Examples/DDS3/pid.cpp
+iostream
+-
+cmath
+-
+pid.h
+/home/pi/Navio2/C++/Examples/DDS3/pid.h
+
+/home/pi/Navio2/C++/Examples/DDS3/pid.h
 
 /home/pi/Navio2/C++/Navio/Common/Util.h
 

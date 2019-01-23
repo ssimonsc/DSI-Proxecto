@@ -183,6 +183,9 @@ fastrtps_DIR:PATH=/usr/local/lib/fastrtps/cmake
 //Dependencies for target
 navio_LIB_DEPENDS:STATIC=
 
+//Dependencies for target
+pid_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

@@ -35,6 +35,7 @@ CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorld.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorldPubSubTypes.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorldPublisher.cpp
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: HelloWorldPublisher.h
+CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: pid.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /home/pi/Navio2/C++/Navio/Common/Util.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/fastrtps/Domain.h
 CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o: /usr/local/include/fastrtps/TopicDataType.h
@@ -195,6 +196,8 @@ CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o: /usr/local/include/fastr
 CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o: /usr/local/include/fastrtps/utils/eClock.h
 CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o: /usr/local/include/fastrtps/utils/md5.h
 
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o: detectorConos.cpp
+
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o: ../../Navio/Common/ADC.h
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o: ../../Navio/Common/Util.h
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp
@@ -229,4 +232,7 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o: .
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o: ../../Navio/Common/gpio.h
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/RGBled.h
+
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o: pid.cpp
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o: pid.h
 

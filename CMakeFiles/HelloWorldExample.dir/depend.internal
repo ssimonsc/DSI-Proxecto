@@ -36,6 +36,7 @@ CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o
  /home/pi/Navio2/C++/Examples/DDS3/HelloWorldPubSubTypes.h
  /home/pi/Navio2/C++/Examples/DDS3/HelloWorldPublisher.cpp
  /home/pi/Navio2/C++/Examples/DDS3/HelloWorldPublisher.h
+ /home/pi/Navio2/C++/Examples/DDS3/pid.h
  /home/pi/Navio2/C++/Navio/Common/Util.h
  /usr/local/include/fastrtps/Domain.h
  /usr/local/include/fastrtps/TopicDataType.h
@@ -195,6 +196,8 @@ CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o
  /usr/local/include/fastrtps/utils/DBQueue.h
  /usr/local/include/fastrtps/utils/eClock.h
  /usr/local/include/fastrtps/utils/md5.h
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o
+ /home/pi/Navio2/C++/Examples/DDS3/detectorConos.cpp
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o
  ../../Navio/Common/ADC.h
  ../../Navio/Common/Util.h
@@ -230,3 +233,6 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o
  ../../Navio/Common/gpio.h
  /home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp
  /home/pi/Navio2/C++/Navio/Navio2/RGBled.h
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o
+ /home/pi/Navio2/C++/Examples/DDS3/pid.cpp
+ /home/pi/Navio2/C++/Examples/DDS3/pid.h

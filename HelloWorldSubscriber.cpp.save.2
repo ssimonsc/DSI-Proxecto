@@ -128,11 +128,11 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
   		servoRight = (-m_Hello.forward() + 1509) * 2 + 800;
   		servoLeft = (-m_Hello.forward() + 1509) * 2 + 800; 
 
-  		if(m_Hello.direction() > 1519)
+  		if(m_Hello.direction() > 1525)
   		{
 			servoRight += ((m_Hello.direction() - 1508) / 2);
   		}
-    		if(m_Hello.direction() < 1519)
+    		if(m_Hello.direction() < 1495)
   		{
 			servoLeft += ((-m_Hello.direction() + 1508) / 2);
   		}
@@ -156,8 +156,7 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
 	    }
 */
 	    //send data to engines
-	    pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, servoRight);
-	    pwm->set_duty_cycle(PWM_OUTPUT_LEFT, servoLeft);
+	    pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, servoRight);	    pwm->set_duty_cycle(PWM_OUTPUT_LEFT, servoLeft);
 
             std::cout << "Message "<<m_Hello.forward()<< " "<< m_Hello.direction()<< " RECEIVED"<<std::endl;
         }
@@ -173,15 +172,15 @@ int HelloWorldSubscriber::run()
 
     printf("OLA MUNDO OPENCV");
 
-	
+
         if (check_apm()) {
             return 1;
         }
-	
+
         if( !(pwm->initialize(PWM_OUTPUT_RIGHT)) ) {
             return 1;
         }
-//	printf("Llega aquí\n");
+
         if( !(pwm->initialize(PWM_OUTPUT_LEFT)) ) {
             return 1;
         }
@@ -197,40 +196,12 @@ int HelloWorldSubscriber::run()
         if ( !(pwm->enable(PWM_OUTPUT_LEFT)) ) {
             return 1;
 	}
-
-        printf("chega aquí\n");
-
 /*
-        for(int i=0; i<1500; i++){
+        for(int i=0; i<4; i++){
                 pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 1400);
                 pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 1400);
-                usleep(10000);
-        }
-*/
-/*    for(int i = 0; i < 1500; i++){
-		pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 1610);
-                pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 1610);
-                usleep(100);
-        }
-
-               std::cout << "fin primeiro nivel" << std::endl;
-
-     for(int i = 0; i < 1500; i++){
-                pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 790);
-                pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 790);
-                usleep(100);
-        }
-
-
-                std::cout << "fin segundo nivel" << std::endl;
-
-	while(true) {
-                pwm->set_duty_cycle(PWM_OUTPUT_RIGHT, 1418);
-                pwm->set_duty_cycle(PWM_OUTPUT_LEFT, 1418);
-                usleep(100);
-
-
-	}*/
+                sleep(1);
+        }*/
 /*  std::cout << "NIVEL ALTO"<<std::endl;
 
 	for(int i = 0; i < 100; i++){

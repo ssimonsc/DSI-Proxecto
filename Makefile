@@ -90,16 +90,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -121,6 +111,16 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,6 +155,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pid
+
+# Build rule for target.
+pid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pid
+.PHONY : pid
+
+# fast build rule for target.
+pid/fast:
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/build
+.PHONY : pid/fast
+
+#=============================================================================
+# Target rules for targets named HelloWorldExample
+
+# Build rule for target.
+HelloWorldExample: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HelloWorldExample
+.PHONY : HelloWorldExample
+
+# fast build rule for target.
+HelloWorldExample/fast:
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/build
+.PHONY : HelloWorldExample/fast
+
+#=============================================================================
 # Target rules for targets named navio
 
 # Build rule for target.
@@ -179,19 +205,6 @@ common: cmake_check_build_system
 common/fast:
 	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/build
 .PHONY : common/fast
-
-#=============================================================================
-# Target rules for targets named HelloWorldExample
-
-# Build rule for target.
-HelloWorldExample: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 HelloWorldExample
-.PHONY : HelloWorldExample
-
-# fast build rule for target.
-HelloWorldExample/fast:
-	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/build
-.PHONY : HelloWorldExample/fast
 
 HelloWorld.o: HelloWorld.cxx.o
 
@@ -327,6 +340,33 @@ HelloWorld_main.s: HelloWorld_main.cpp.s
 HelloWorld_main.cpp.s:
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.s
 .PHONY : HelloWorld_main.cpp.s
+
+detectorConos.o: detectorConos.cpp.o
+
+.PHONY : detectorConos.o
+
+# target to build an object file
+detectorConos.cpp.o:
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o
+.PHONY : detectorConos.cpp.o
+
+detectorConos.i: detectorConos.cpp.i
+
+.PHONY : detectorConos.i
+
+# target to preprocess a source file
+detectorConos.cpp.i:
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.i
+.PHONY : detectorConos.cpp.i
+
+detectorConos.s: detectorConos.cpp.s
+
+.PHONY : detectorConos.s
+
+# target to generate assembly for a file
+detectorConos.cpp.s:
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.s
+.PHONY : detectorConos.cpp.s
 
 home/pi/Navio2/C++/Navio/Common/I2Cdev.o: home/pi/Navio2/C++/Navio/Common/I2Cdev.cpp.o
 
@@ -496,8 +536,8 @@ home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.o: home/pi/Navio2/C++/Navio/Navio2/AD
 
 # target to build an object file
 home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o
 
 home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.i: home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.i
@@ -506,8 +546,8 @@ home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.i: home/pi/Navio2/C++/Navio/Navio2/AD
 
 # target to preprocess a source file
 home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.i:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.i
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.i
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.i
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.i
 
 home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.s: home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.s
@@ -516,8 +556,8 @@ home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.s: home/pi/Navio2/C++/Navio/Navio2/AD
 
 # target to generate assembly for a file
 home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.s:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.s
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.s
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.s
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.s
 
 home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.o: home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o
@@ -526,8 +566,8 @@ home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.o: home/pi/Navio2/C++/Navio/Navio2/LSM9D
 
 # target to build an object file
 home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o
 
 home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.i: home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.i
@@ -536,8 +576,8 @@ home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.i: home/pi/Navio2/C++/Navio/Navio2/LSM9D
 
 # target to preprocess a source file
 home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.i:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.i
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.i
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.i
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.i
 
 home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.s: home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.s
@@ -546,8 +586,8 @@ home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.s: home/pi/Navio2/C++/Navio/Navio2/LSM9D
 
 # target to generate assembly for a file
 home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.s:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.s
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.s
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.s
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.s
 
 home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.o: home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o
@@ -556,8 +596,8 @@ home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.o: home/pi/Navio2/C++/Navio/Navio2/Le
 
 # target to build an object file
 home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o
 
 home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.i: home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.i
@@ -566,8 +606,8 @@ home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.i: home/pi/Navio2/C++/Navio/Navio2/Le
 
 # target to preprocess a source file
 home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.i:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.i
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.i
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.i
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.i
 
 home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.s: home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.s
@@ -576,8 +616,8 @@ home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.s: home/pi/Navio2/C++/Navio/Navio2/Le
 
 # target to generate assembly for a file
 home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.s:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.s
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.s
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.s
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.s
 
 home/pi/Navio2/C++/Navio/Navio2/PWM.o: home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o
@@ -586,8 +626,8 @@ home/pi/Navio2/C++/Navio/Navio2/PWM.o: home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o
 
 # target to build an object file
 home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o
 
 home/pi/Navio2/C++/Navio/Navio2/PWM.i: home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i
@@ -596,8 +636,8 @@ home/pi/Navio2/C++/Navio/Navio2/PWM.i: home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i
 
 # target to preprocess a source file
 home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i
 
 home/pi/Navio2/C++/Navio/Navio2/PWM.s: home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.s
@@ -606,8 +646,8 @@ home/pi/Navio2/C++/Navio/Navio2/PWM.s: home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.s
 
 # target to generate assembly for a file
 home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.s:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.s
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.s
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.s
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.s
 
 home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.o: home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o
@@ -616,8 +656,8 @@ home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.o: home/pi/Navio2/C++/Navio/Navio
 
 # target to build an object file
 home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o
 
 home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.i: home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.i
@@ -626,8 +666,8 @@ home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.i: home/pi/Navio2/C++/Navio/Navio
 
 # target to preprocess a source file
 home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.i:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.i
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.i
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.i
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.i
 
 home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.s: home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.s
@@ -636,8 +676,8 @@ home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.s: home/pi/Navio2/C++/Navio/Navio
 
 # target to generate assembly for a file
 home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.s:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.s
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.s
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.s
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.s
 
 home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.o: home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o
@@ -646,8 +686,8 @@ home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.o: home/pi/Navio2/C++/Navio/Navi
 
 # target to build an object file
 home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o
 
 home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.i: home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.i
@@ -656,8 +696,8 @@ home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.i: home/pi/Navio2/C++/Navio/Navi
 
 # target to preprocess a source file
 home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.i:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.i
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.i
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.i
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.i
 
 home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.s: home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.s
@@ -666,8 +706,8 @@ home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.s: home/pi/Navio2/C++/Navio/Navi
 
 # target to generate assembly for a file
 home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.s:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.s
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.s
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.s
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.s
 
 home/pi/Navio2/C++/Navio/Navio2/RGBled.o: home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o
@@ -676,8 +716,8 @@ home/pi/Navio2/C++/Navio/Navio2/RGBled.o: home/pi/Navio2/C++/Navio/Navio2/RGBled
 
 # target to build an object file
 home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o
 
 home/pi/Navio2/C++/Navio/Navio2/RGBled.i: home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.i
@@ -686,8 +726,8 @@ home/pi/Navio2/C++/Navio/Navio2/RGBled.i: home/pi/Navio2/C++/Navio/Navio2/RGBled
 
 # target to preprocess a source file
 home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.i:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.i
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.i
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.i
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.i
 
 home/pi/Navio2/C++/Navio/Navio2/RGBled.s: home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.s
@@ -696,9 +736,39 @@ home/pi/Navio2/C++/Navio/Navio2/RGBled.s: home/pi/Navio2/C++/Navio/Navio2/RGBled
 
 # target to generate assembly for a file
 home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.s:
-	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.s
 	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.s
+	$(MAKE) -f CMakeFiles/navio.dir/build.make CMakeFiles/navio.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.s
 .PHONY : home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.s
+
+pid.o: pid.cpp.o
+
+.PHONY : pid.o
+
+# target to build an object file
+pid.cpp.o:
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/pid.cpp.o
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/pid.cpp.o
+.PHONY : pid.cpp.o
+
+pid.i: pid.cpp.i
+
+.PHONY : pid.i
+
+# target to preprocess a source file
+pid.cpp.i:
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/pid.cpp.i
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/pid.cpp.i
+.PHONY : pid.cpp.i
+
+pid.s: pid.cpp.s
+
+.PHONY : pid.s
+
+# target to generate assembly for a file
+pid.cpp.s:
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/pid.cpp.s
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/pid.cpp.s
+.PHONY : pid.cpp.s
 
 # Help Target
 help:
@@ -709,12 +779,13 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... edit_cache"
+	@echo "... pid"
+	@echo "... HelloWorldExample"
 	@echo "... list_install_components"
 	@echo "... navio"
 	@echo "... common"
-	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... HelloWorldExample"
 	@echo "... HelloWorld.o"
 	@echo "... HelloWorld.i"
 	@echo "... HelloWorld.s"
@@ -730,6 +801,9 @@ help:
 	@echo "... HelloWorld_main.o"
 	@echo "... HelloWorld_main.i"
 	@echo "... HelloWorld_main.s"
+	@echo "... detectorConos.o"
+	@echo "... detectorConos.i"
+	@echo "... detectorConos.s"
 	@echo "... home/pi/Navio2/C++/Navio/Common/I2Cdev.o"
 	@echo "... home/pi/Navio2/C++/Navio/Common/I2Cdev.i"
 	@echo "... home/pi/Navio2/C++/Navio/Common/I2Cdev.s"
@@ -769,6 +843,9 @@ help:
 	@echo "... home/pi/Navio2/C++/Navio/Navio2/RGBled.o"
 	@echo "... home/pi/Navio2/C++/Navio/Navio2/RGBled.i"
 	@echo "... home/pi/Navio2/C++/Navio/Navio2/RGBled.s"
+	@echo "... pid.o"
+	@echo "... pid.i"
+	@echo "... pid.s"
 .PHONY : help
 
 

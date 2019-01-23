@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o"
   "CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o"
   "CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o"
+  "CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o"
+  "CMakeFiles/HelloWorldExample.dir/pid.cpp.o"
   "CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o"
   "CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o"
   "CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o"

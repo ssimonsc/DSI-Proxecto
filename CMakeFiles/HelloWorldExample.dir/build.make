@@ -177,9 +177,57 @@ CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o.provides: CMakeFiles/Hell
 CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o.provides.build: CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o
 
 
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o: detectorConos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o -c /home/pi/Navio2/C++/Examples/DDS3/detectorConos.cpp
+
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Navio2/C++/Examples/DDS3/detectorConos.cpp > CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.i
+
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Navio2/C++/Examples/DDS3/detectorConos.cpp -o CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.s
+
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.requires:
+
+.PHONY : CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.requires
+
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.provides: CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.provides.build
+.PHONY : CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.provides
+
+CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.provides.build: CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o
+
+
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o: pid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HelloWorldExample.dir/pid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/pid.cpp.o -c /home/pi/Navio2/C++/Examples/DDS3/pid.cpp
+
+CMakeFiles/HelloWorldExample.dir/pid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorldExample.dir/pid.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Navio2/C++/Examples/DDS3/pid.cpp > CMakeFiles/HelloWorldExample.dir/pid.cpp.i
+
+CMakeFiles/HelloWorldExample.dir/pid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorldExample.dir/pid.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Navio2/C++/Examples/DDS3/pid.cpp -o CMakeFiles/HelloWorldExample.dir/pid.cpp.s
+
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o.requires:
+
+.PHONY : CMakeFiles/HelloWorldExample.dir/pid.cpp.o.requires
+
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o.provides: CMakeFiles/HelloWorldExample.dir/pid.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HelloWorldExample.dir/build.make CMakeFiles/HelloWorldExample.dir/pid.cpp.o.provides.build
+.PHONY : CMakeFiles/HelloWorldExample.dir/pid.cpp.o.provides
+
+CMakeFiles/HelloWorldExample.dir/pid.cpp.o.provides.build: CMakeFiles/HelloWorldExample.dir/pid.cpp.o
+
+
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o -c /home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.i: cmake_force
@@ -203,7 +251,7 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o -c /home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.i: cmake_force
@@ -227,7 +275,7 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o.p
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o -c /home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.i: cmake_force
@@ -251,7 +299,7 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/PWM.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o -c /home/pi/Navio2/C++/Navio/Navio2/PWM.cpp
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.i: cmake_force
@@ -275,7 +323,7 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/PWM.cpp.o.provi
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.o -c /home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.cpp.i: cmake_force
@@ -299,7 +347,7 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCInput_Navio2.
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o -c /home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.i: cmake_force
@@ -323,7 +371,7 @@ CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o: CMakeFiles/HelloWorldExample.dir/flags.make
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o: /home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o -c /home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp
 
 CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.i: cmake_force
@@ -352,6 +400,8 @@ HelloWorldExample_OBJECTS = \
 "CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o" \
 "CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o" \
 "CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o" \
+"CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o" \
+"CMakeFiles/HelloWorldExample.dir/pid.cpp.o" \
 "CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o" \
 "CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o" \
 "CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o" \
@@ -368,6 +418,8 @@ HelloWorldExample: CMakeFiles/HelloWorldExample.dir/HelloWorldPubSubTypes.cxx.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o
+HelloWorldExample: CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o
+HelloWorldExample: CMakeFiles/HelloWorldExample.dir/pid.cpp.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o
@@ -376,6 +428,7 @@ HelloWorldExample: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Nav
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RCOutput_Navio2.cpp.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/RGBled.cpp.o
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/build.make
+HelloWorldExample: libpid.a
 HelloWorldExample: /usr/local/lib/libfastrtps.so.1.6.0
 HelloWorldExample: /usr/local/lib/libfastcdr.so.1.0.7
 HelloWorldExample: libnavio.a
@@ -383,7 +436,7 @@ HelloWorldExample: libcommon.a
 HelloWorldExample: /usr/lib/arm-linux-gnueabihf/libssl.so
 HelloWorldExample: /usr/lib/arm-linux-gnueabihf/libcrypto.so
 HelloWorldExample: CMakeFiles/HelloWorldExample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable HelloWorldExample"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Navio2/C++/Examples/DDS3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable HelloWorldExample"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HelloWorldExample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -396,6 +449,8 @@ CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/Hell
 CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o.requires
 CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o.requires
 CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o.requires
+CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/detectorConos.cpp.o.requires
+CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/pid.cpp.o.requires
 CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/ADC_Navio2.cpp.o.requires
 CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/LSM9DS1.cpp.o.requires
 CMakeFiles/HelloWorldExample.dir/requires: CMakeFiles/HelloWorldExample.dir/home/pi/Navio2/C++/Navio/Navio2/Led_Navio2.cpp.o.requires

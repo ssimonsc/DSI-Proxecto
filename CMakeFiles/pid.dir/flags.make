@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pi/Navio2/C++/Examples/DDS3/../../Navio -isystem /usr/local/include 
+CXX_INCLUDES = -I/home/pi/Navio2/C++/Examples/DDS3/../../Navio 
 

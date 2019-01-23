@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Navio2/C++/Examples/DDS3/pid.cpp
+iostream
+-
+cmath
+-
+pid.h
+/home/pi/Navio2/C++/Examples/DDS3/pid.h
+
+/home/pi/Navio2/C++/Examples/DDS3/pid.h
+
