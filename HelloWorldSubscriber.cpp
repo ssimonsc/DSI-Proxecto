@@ -120,21 +120,25 @@ void HelloWorldSubscriber::SubListener::onNewDataMessage(Subscriber* sub)
 
 		if(m_Hello.forward() > 1520)
 		{
-   		servoRight = SERVO_MIN;
-   		servoLeft = SERVO_MIN;
+	   		servoRight = SERVO_MIN;
+   			servoLeft = SERVO_MIN;
 		}
 	else
 	{
-  		servoRight = (-m_Hello.forward() + 1509) * 2 + 800;
-  		servoLeft = (-m_Hello.forward() + 1509) * 2 + 800; 
+  		servoRight = (-m_Hello.forward() + 1508) * 2 + 800;
+  		servoLeft = (-m_Hello.forward() + 1508) * 2 + 800; 
 
-  		if(m_Hello.direction() > 1519)
+  		if(m_Hello.direction() > 1530)
   		{
-			servoRight += ((m_Hello.direction() - 1508) / 2);
+	 		 servoRight += ((m_Hello.direction() - 1508) / 2);
+			//servoRight += ((m_Hello.direction() - 1519) / 2);
+
   		}
-    		if(m_Hello.direction() < 1519)
+    		if(m_Hello.direction() < 1497)
   		{
 			servoLeft += ((-m_Hello.direction() + 1508) / 2);
+//              servoLeft += ((-m_Hello.direction() + 1519) / 2);
+
   		}
 	}
 

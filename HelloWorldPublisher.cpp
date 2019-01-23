@@ -32,8 +32,10 @@ using namespace cv;
 using namespace std;
 
 double inc =0;
-PID pid = PID(0.3, 1475, 1544, 0.9, 0.2, 0.6);
-
+ //PID pid = PID(0.3, 1480, 1544, 0.8, 0.2, 0.6);
+// PID pid = PID(0.3, 1544, 1455, 0.7, 0.2, 0.8);
+PID pid = PID(0.1, 1544, 1475, 0.4, 0.2, 0.6);
+             // Laranxa, Verde
 HelloWorldPublisher::HelloWorldPublisher():mp_participant(nullptr),
 mp_publisher(nullptr)
 {
@@ -187,7 +189,7 @@ int iLastX = -1;
 	int forward = 1198;
 	int direction = 1519;
 	//int direction = 1480;
-	int posXg = 640;
+	int posXg = 0;
 	// if the area <= 10000, I consider that the there are no object in the image and it's because of the noise, the area is not zero 
   	if (dAreag > 10000)
   	{
@@ -225,7 +227,7 @@ Mat imgOrange;
  // double dM01 = oMoments.m01;
   double dM10 = oMoments.m10;
   double dArea = oMoments.m00;
-	int posX = 0;
+	int posX = 640;
   // if the area <= 10000, I consider that the there are no object in the image and it's because of the noise, the area is not zero 
   if (dArea > 10000)
   {

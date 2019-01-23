@@ -6,6 +6,8 @@
 #include "pid.h"
 
 using namespace std;
+int valorMin_Max = 1900;
+int valorMax_Max = 1350;
 
 class PIDImpl
 {
@@ -58,7 +60,7 @@ PIDImpl::PIDImpl( double dt, double max, double min, double Kp, double Kd, doubl
 double PIDImpl::calculate( double setpoint, double pv )
 {
     
-if (pv > 300 && pv < 340) return 1519;
+if (pv > 315 && pv < 325) return 1519;
     // Calculate error
    double errortmp = setpoint;
     double error = setpoint - pv;
@@ -89,18 +91,49 @@ if (pv > 300 && pv < 340) return 1519;
 
 
     // Calculate total output
-    double output = Pout + Iout + Dout + 600;
+    double output = Pout + Iout + Dout + 550;
 
     std::cout << "output: " << output <<std::endl;
 
+int aux;
+int valorMin_actual = output;
+
+if(output > valorMax_Max && output < 1900)
+        valorMax_Max = output;
+
+if(valorMin_actual < valorMin_Max && output > 1350)
+	valorMin_Max = valorMin_actual;
+ std::cout << "MAX: " << valorMax_Max <<std::endl;
+ std::cout << "MIN: " << valorMin_Max <<std::endl;
+
+int aux0 = valorMax_Max - valorMin_Max;
+ std::cout << "aux0: " << aux0 <<std::endl;
+
+aux = output - valorMin_Max;
+int aux2;
+if(aux0 != 0)
+aux2 = (100 * aux) / aux0;
+else
+aux2 = (100 * aux) / 300;
+
+ std::cout << "aux: " << aux <<std::endl;
+ std::cout << "aux2: " << aux2 << "%" <<std::endl;
 
     // Restrict to max/min
-    if( output > _max )
-        output = _max;
-    else if( output < _min )
-        output = _min;
+ //   if( output > _max )
+int aux3;
+aux3 = _max - _min;
+output = ( (aux2 * aux3) / 100) + _min;
+std::cout << "output2: " << output <<std::endl; 
 
- std::cout << "output2: " << output <<std::endl;
+
+	if(aux2 > 70)
+   	output = _max;
+//    else if( output < _min )
+	 else if(aux2 < 30)
+	  output = _min;
+
+ std::cout << "output3: " << output <<std::endl;
 
     // Save error to previous error
     _pre_error = error;
